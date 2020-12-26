@@ -55,7 +55,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
-          passphrase: ${{ secrets.PASSPHRASE }} # если ваш ssh-ключ защищен фразой-паролем
+          passphrase: ${{ secrets.PASSPHRASE }} # если ваш ssh-ключ защищен фразой-пароле
           script: |
             sudo docker pull dzanto/flask_ya
             sudo docker stop $(sudo docker ps -a -q)
