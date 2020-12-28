@@ -43,7 +43,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: dzanto/flask_ya:latest
+          tags: dzanto/yamdb
 
   deploy:
     runs-on: ubuntu-latest
@@ -57,9 +57,11 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }} # если ваш ssh-ключ защищен фразой-пароле
           script: |
-            sudo docker pull dzanto/flask_ya
-            sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 dzanto/flask_ya
+            cd yamdb_final
+            git pull
+            sudo docker-compose down
+            sudo docker-compose up -d
+
 
   send_message:
     runs-on: ubuntu-latest
