@@ -1,3 +1,3 @@
 # yamdb_final
 yamdb_final
-![example workflow file path](https://github.com/dzanto/yamdb_final/.github/workflows/yamdb.yaml/badge.svg)
+![example workflow name](https://github.com/dzanto/yamdb_final/workflows/Yamdb-app%20workflow/badge.svg)
