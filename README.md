@@ -12,9 +12,21 @@
 - Добавление произведений (Книга, фильм, песня)
 - Добавление отзывов к произведениям
 
-## Установка
-1. Склонировать репозитарий git clone 
-2. Скопировать docker-compose.yaml
+## Запуск с помощью Docker
+- Склонировать репозитарий `git clone https://github.com/dzanto/yamdb_final.git`
+- Собрать docker образ `docker build -t dzanto/yamdb`
+- Запустить
+`docker-compose up --detach`
+- выполнить миграции:
+```
+docker-compose exec web python manage.py makemigrations user_management
+docker-compose exec web python manage.py makemigrations api
+docker-compose exec web python manage.py migrate
+```
+- создать суперпользователя
+```
+docker-compose exec web python manage.py migrate
+```
 
 ## Алгоритм регистрации пользователей
 1. Пользователь отправляет запрос с параметром `email` на `/auth/email/`.
