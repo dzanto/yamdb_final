@@ -14,6 +14,7 @@ services:
       - ./.env
 
   web:
+#    build: .
     image: dzanto/yamdb
     restart: always
     volumes:
@@ -24,7 +25,6 @@ services:
       - db
     env_file:
       - ./.env
-    command: "gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000"
 
   nginx:
     image: nginx:1.19.5-alpine
