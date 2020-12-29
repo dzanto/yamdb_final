@@ -60,7 +60,7 @@ jobs:
             cd yamdb_final
             sudo docker pull dzanto/yamdb
             sudo docker-compose down
-            sudo docker-compose up
+            sudo docker-compose up --detach
 
   send_message:
     runs-on: ubuntu-latest
