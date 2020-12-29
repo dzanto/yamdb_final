@@ -58,9 +58,9 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }} # если ваш ssh-ключ защищен фразой-пароле
           script: |
             cd yamdb_final
+            sudo docker pull dzanto/yamdb
             sudo docker-compose down
             sudo docker-compose up
-
 
   send_message:
     runs-on: ubuntu-latest
