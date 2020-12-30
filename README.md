@@ -1,7 +1,10 @@
 ![example workflow name](https://github.com/dzanto/yamdb_final/workflows/Yamdb-app%20workflow/badge.svg)
 # REST API для сервиса YaMDb — базы отзывов о фильмах, книгах и музыке.
-
 запросы к API начинаются с `/api/v1/`
+#####Demo:
+- http://84.201.150.162/redoc/
+- http://84.201.150.162/api/v1/
+
 
 ## Описание
 
@@ -42,6 +45,7 @@ docker-compose exec web python manage.py migrate
 - **Администратор Django** — те же права, что и у роли **Администратор**.
 
 
-
+Автор: Shishlin A.
+https://vologda.hh.ru/resume/91066c72ff0876d5180039ed1f44796674474f
 
 Проект выполнен командой из трех разработчиков
