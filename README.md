@@ -45,7 +45,7 @@ docker-compose exec web python manage.py migrate
 - **Администратор Django** — те же права, что и у роли **Администратор**.
 
 
-Автор: Shishlin A.
+разработчик: Shishlin A.
 https://vologda.hh.ru/resume/91066c72ff0876d5180039ed1f44796674474f
 
 Проект выполнен командой из трех разработчиков
