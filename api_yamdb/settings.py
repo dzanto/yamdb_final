@@ -73,7 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'api_yamdb.wsgi.application'
 
-# Database
+# Databas
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
